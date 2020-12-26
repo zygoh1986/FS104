@@ -36,6 +36,7 @@ else:
 number1 = float(input("Enter first number: "))
 number2 = float(input("Enter second number: "))
 number3 = float(input("Enter third number: "))
+
 if (number1 >= number2) and (number1 >= number3):
    largest = number1
 elif (number2 >= number1) and (number2 >= number3):
@@ -144,15 +145,17 @@ elif (checknum != 0) and (checknum2 ==0):
 
 # 3. For lst = 4, 2, 9, 1, what is the result of the following operation, lst.insert(2, 3)?
 #ANWER A
+
 # (a) 4, 2, 3, 9, 1 
 # (b) 4, 3 ,2, 9, 1 
 # (c) 4, 2, 9, 2, 1
 
 # Question 2
 # What Will Be The Output Of The Following Code Snippet? 
-#ANSWER: C
+#ANSWER: A
+
 # a = 1,2,3,4,5 
-# a0:4:2
+# a[0:4:2]
 
 # A. 1,3
 # B. 1,3,5
@@ -162,8 +165,13 @@ elif (checknum != 0) and (checknum2 ==0):
 # Write a Python program to print a tuple with string formatting.
 # Sample tuple : (100, 200, 300)
 # Output : This is a tuple (100, 200, 300)
-# What would be the range of index values for a list of 10 elements?
+x = (100,200,300)
+print("This is a tuple, {}".format(str(x)))
 
+
+
+
+# What would be the range of index values for a list of 10 elements?
 # ANSWER (A)
 # (a) 0–9 (b) 0–10 (c) 1–10
 
@@ -208,6 +216,7 @@ for i in [1, 2, 3, 4, 5]:
 
 # Question 3
 # Predict the Output.
+
 #ANSWER:
 # 1 times 8 = 8
 # 2 times 8 = 16
@@ -292,20 +301,18 @@ import random
 import string
 
 if __name__ == "__main__":
-    s1 = string.ascii_lowercase
-    s2 = string.ascii_uppercase
-    s3 = string.digits
-    s4 = string.punctuation
-    plen = int(input("Enter password length: "))
-    s = []
-    s.extend(list(s1))
-    s.extend(list(s2))
-    s.extend(list(s3))
-    s.extend(list(s4))
+    z1 = string.ascii_lowercase
+    z2 = string.ascii_uppercase
+    z3 = string.digits
+    z4 = string.punctuation
+    password = int(input("Enter password length: "))
+    a = []
+    a.extend(list(z1))
+    a.extend(list(z2))
+    a.extend(list(z3))
+    a.extend(list(z4))
     print("Your password: ", end="")
-    print("".join(random.sample(s, plen)))
-
-
+    print("".join(random.sample(a, password)))
 
 
 
