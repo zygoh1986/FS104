@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
-
 import "./TodoList.css";
  
 class TodoList extends Component {
@@ -9,16 +8,19 @@ class TodoList extends Component {
 
         this.state = {
             items: []
+            
           };
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
       }
       addItem(e) {
-          if (this._inputElement.value !== "")
+          if (this._inputElement.value !== "" && this._inputElementTwo.value !== "" && this._inputElementThree.value !=="")
           {
               var newItem = {
                   text: this._inputElement.value,
-                  key: Date.now()
+                  textTwo: this._inputElementTwo.value,
+                  textThree: this._inputElementThree.value,
+                  key: Math.random()
               };
               this.setState((prevState) => {
 
@@ -27,8 +29,12 @@ class TodoList extends Component {
                 }
               });
           }
+          else {
+            
+          }
           this._inputElement.value = "";
-
+          this._inputElementTwo.value = "";
+          this._inputElementThree.value = "";
           console.log(this.state.items);
 
           e.preventDefault();
@@ -52,9 +58,15 @@ class TodoList extends Component {
         <div className="header">
             <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a}
-                placeholder="Enter your task">
+                placeholder="Enter your task...">
             </input>
-            
+            <input ref={(b) => this._inputElementTwo = b} 
+              placeholder="Task assigned to..."></input>
+            <select ref={(c) => this._inputElementThree = c} className="dropdw">
+            <option value="" disabled selected>Your Priority</option>
+              <option value="High Priority">High Priority</option>
+              <option value="Low Priority">Low Priority</option>
+            </select>
             <button type="submit">+</button>
           </form>
         </div>
