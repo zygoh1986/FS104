@@ -10,7 +10,7 @@ class TodoItems extends Component {
     }
 
 
-
+  
   createTasks(item) {
   return (
     <div className="result">
@@ -28,8 +28,19 @@ class TodoItems extends Component {
   }
  
   render() {
+    
     var todoEntries = this.props.entries;
+    todoEntries.sort(function(a, b){
+      var itemA = a.textThree;
+      var itemB = b.textThree;
+      if (itemA < itemB)
+      {
+        return -1; 
+      }
+      return 0;
+    })
     var listItems = todoEntries.map(this.createTasks);
+    
  
     return (
       <ul className="theList">

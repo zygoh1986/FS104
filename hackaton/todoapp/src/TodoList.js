@@ -8,8 +8,9 @@ class TodoList extends Component {
 
         this.state = {
             items: []
-            
           };
+          
+          
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
       }
@@ -51,6 +52,8 @@ class TodoList extends Component {
           }
 
 
+
+
     
   render() {
     return (
@@ -64,8 +67,8 @@ class TodoList extends Component {
               placeholder="Task assigned to..."></input>
             <select ref={(c) => this._inputElementThree = c} className="dropdw">
             <option value="" disabled selected>Your Priority</option>
-              <option value="High Priority">High Priority</option>
-              <option value="Low Priority">Low Priority</option>
+              <option value="High">High Priority</option>
+              <option value="Low">Low Priority</option>
             </select>
             <button type="submit">+</button>
           </form>
