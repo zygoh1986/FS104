@@ -378,3 +378,4 @@ while i < 64:
     a = 2**i
     print("No of square:", i, "equals", a)
     i += 1
+
