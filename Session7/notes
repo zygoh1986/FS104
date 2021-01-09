@@ -1,0 +1,12 @@
+1. npx / npm create-react-app myapp
+
+    1. Separate folder for your application.
+    2. Code structure/ list of required folder
+    3. Pulls stores in the folders, required dependencies
+    4. Helps to create an exclusive environment for the application only
+
+npm install
+package.json
+
+Seperate virutal environment tp run an application in a mutually exclusive mode.
+    it has its own dependencies which are installed and referred by only this application

@@ -19,6 +19,12 @@ try:
     connection.commit()
     print("Table created successfully in PostgreSQL ")
 
+# Executing a SQL query to insert data into  table
+    # insert_query = """ INSERT INTO mobile (ID, MODEL, PRICE) VALUES (1, 'Iphone12', 1100)"""
+    # cursor.execute(insert_query)
+    # connection.commit()
+    # print("1 Record inserted successfully")
+
 except (Exception, Error) as error:
     print("Error while connecting to PostgreSQL", error)
 finally:
