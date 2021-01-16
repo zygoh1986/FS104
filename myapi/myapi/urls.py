@@ -31,7 +31,7 @@ router.register(r'borrowings', myapp_views.BorrowedViewset)
 
 urlpatterns = [
     
-    path('', views.HelloView.as_view(), name='hello'),
+    path('hello/', views.HelloView.as_view(), name='hello'),
     path('admin/', admin.site.urls),
     path('api-token-auth/', obtain_auth_token, name='api_token_auth'),  
     path('api/crudops/', include(router.urls)),

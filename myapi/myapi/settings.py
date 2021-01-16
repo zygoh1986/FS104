@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'core.apps.CoreConfig',
+    'crudapp.apps.CrudappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
