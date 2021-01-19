@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TodoItems from "./TodoItems";
 import "./TodoList.css";
+import SayHello from "./SayHello";
+
  
 class TodoList extends Component {
     constructor(props) {
@@ -14,6 +16,8 @@ class TodoList extends Component {
         this.addItem = this.addItem.bind(this);
         this.deleteItem = this.deleteItem.bind(this);
       }
+      
+
       addItem(e) {
           if (this._inputElement.value !== "" && this._inputElementTwo.value !== "" && this._inputElementThree.value !=="")
           {
@@ -59,6 +63,7 @@ class TodoList extends Component {
     return (
       <div className="todoListMain">
         <div className="header">
+
             <form onSubmit={this.addItem}>
             <input ref={(a) => this._inputElement = a}
                 placeholder="Enter your task...">
@@ -72,6 +77,7 @@ class TodoList extends Component {
             </select>
             <button type="submit">+</button>
           </form>
+          <button onClick={SayHello}type="Search">Search</button>
         </div>
         <TodoItems entries={this.state.items}
                     delete={this.deleteItem}/>

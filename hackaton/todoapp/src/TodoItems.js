@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import FlipMove from "react-flip-move";
+import SayHello from './SayHello'
+
 
  
 class TodoItems extends Component {
@@ -8,12 +10,12 @@ class TodoItems extends Component {
 
         this.createTasks = this.createTasks.bind(this);
     }
-
-
+  
   
   createTasks(item) {
   return (
     <div className="result">
+      <SayHello />
     <li onClick={() => this.delete(item.key)}  
                           key={item.key}>
                             <b>Task:</b> {item.text} 
@@ -41,7 +43,7 @@ class TodoItems extends Component {
     })
     var listItems = todoEntries.map(this.createTasks);
     
- 
+    
     return (
       <ul className="theList">
           <FlipMove duration = {250} easing="ease-out">
