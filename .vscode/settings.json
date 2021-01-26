@@ -1,4 +1,5 @@
-{
+pyth{
     "python.dataScience.jupyterServerURI": "local",
-    "jupyter.jupyterServerType": "local"
+    "jupyter.jupyterServerType": "local",
+    "git.ignoreLimitWarning": true
 }
